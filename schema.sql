@@ -3,7 +3,7 @@
 CREATE DATABASE vet_clinic;
 
 CREATE TABLE animals (
-    id integer,
+    id SERIAL PRIMARY KEY,
     name varchar(10),
     date_of_birth date,
     escape_attempts integer,
