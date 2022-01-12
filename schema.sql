@@ -7,3 +7,8 @@ CREATE TABLE owners (
     full_name varchar(15),
     age int
 );
+
+CREATE TABLE species (
+    id SERIAL PRIMARY KEY,
+    name varchar(10)
+);
