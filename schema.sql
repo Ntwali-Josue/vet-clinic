@@ -2,12 +2,8 @@
 
 CREATE DATABASE vet_clinic;
 
-CREATE TABLE animals (
+CREATE TABLE owners (
     id SERIAL PRIMARY KEY,
-    name varchar(10),
-    date_of_birth date,
-    escape_attempts integer,
-    neutered boolean,
-    weight_kg decimal,
-    species varchar(15)
+    full_name varchar(15),
+    age int
 );
