@@ -20,5 +20,6 @@ CREATE TABLE animals (
     escape_attempts integer,
     neutered boolean,
     weight_kg decimal,
-    species_id int REFERENCES species(id)
+    species_id int REFERENCES species(id),
+    owner_id int REFERENCES owners(id)
 );
