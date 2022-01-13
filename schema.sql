@@ -20,6 +20,10 @@ CREATE TABLE animals (
     escape_attempts integer,
     neutered boolean,
     weight_kg decimal,
-    species_id int REFERENCES species(id),
-    owner_id int REFERENCES owners(id)
+    species_id int,
+    FOREIGN KEY(species_id) REFERENCES species(id),
+    owner_id int,
+    FOREIGN KEY(owner_id) REFERENCES owners(id)
 );
+
+DELETE FROM animals where species;
