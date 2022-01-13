@@ -58,3 +58,23 @@ INSERT INTO vets(name,age,date_of_graduation) VALUES
   ('Maisy Smith',26,'Jan,17,2019'),
   ('Stephanie Mendez',64,'May,04,1981'),
   ('Jack Harkness',38,'Jun,08,2008');
+
+INSERT INTO specializations(species_id, vet_id) VALUES (
+  (SELECT species.id FROM species WHERE species.name = 'Pokemon'),
+  (SELECT vets.id FROM vets WHERE vets.name = 'William Tatcher')
+);
+
+INSERT INTO specializations(species_id, vet_id) VALUES (
+  (SELECT species.id FROM species WHERE species.name = 'Pokemon'),
+  (SELECT vets.id FROM vets WHERE vets.name = 'Stephanie Mendez')
+);
+
+INSERT INTO specializations(species_id, vet_id) VALUES (
+  (SELECT species.id FROM species WHERE species.name = 'Digimon'),
+  (SELECT vets.id FROM vets WHERE vets.name = 'Stephanie Mendez')
+);
+
+INSERT INTO specializations(species_id, vet_id) VALUES (
+  (SELECT species.id FROM species WHERE species.name = 'Digimon'),
+  (SELECT vets.id FROM vets WHERE vets.name = 'Jack Harkness')
+);
