@@ -2,6 +2,17 @@
 
 CREATE DATABASE vet_clinic;
 
+CREATE TABLE owners (
+    id SERIAL PRIMARY KEY,
+    full_name varchar(15),
+    age int
+);
+
+CREATE TABLE species (
+    id SERIAL PRIMARY KEY,
+    name varchar(10)
+);
+
 CREATE TABLE animals (
     id SERIAL PRIMARY KEY,
     name varchar(10),
@@ -9,5 +20,10 @@ CREATE TABLE animals (
     escape_attempts integer,
     neutered boolean,
     weight_kg decimal,
-    species varchar(15)
+    species_id int,
+    FOREIGN KEY(species_id) REFERENCES species(id),
+    owner_id int,
+    FOREIGN KEY(owner_id) REFERENCES owners(id)
 );
+
+DELETE FROM animals where species;
