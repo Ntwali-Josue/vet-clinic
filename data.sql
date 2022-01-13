@@ -52,3 +52,9 @@ UPDATE animals SET owner_id = (
 -- populate data in species table
 INSERT INTO species(name) VALUES ('Pokemon');
 INSERT INTO species(name) VALUES ('Digimon');
+
+INSERT INTO vets(name,age,date_of_graduation) VALUES 
+  ('William Tatcher',45,'Apr,23,2000'),
+  ('Maisy Smith',26,'Jan,17,2019'),
+  ('Stephanie Mendez',64,'May,04,1981'),
+  ('Jack Harkness',38,'Jun,08,2008');
