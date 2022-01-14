@@ -10,7 +10,7 @@ CREATE TABLE owners (
 
 CREATE TABLE species (
     id SERIAL PRIMARY KEY,
-    name varchar(10)
+    name varchar(10),
 );
 
 CREATE TABLE animals (
@@ -27,3 +27,27 @@ CREATE TABLE animals (
 );
 
 DELETE FROM animals where species;
+
+CREATE TABLE vets (
+    id SERIAL PRIMARY KEY,
+    name varchar(50),
+    age int,
+    date_of_graduation date
+);
+
+CREATE TABLE specializations (
+    id SERIAL PRIMARY KEY,
+    species_id int, 
+    FOREIGN KEY(species_id) REFERENCES species(id),
+    vet_id int, 
+    FOREIGN KEY(vet_id) REFERENCES vets(id)
+);
+
+CREATE TABLE visits (
+    id SERIAL PRIMARY KEY,
+    animal_id int, 
+    FOREIGN KEY(animal_id) REFERENCES animals(id),
+    vet_id int, 
+    FOREIGN KEY(vet_id) REFERENCES vets(id),
+    date_of_visit date
+);
