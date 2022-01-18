@@ -4,8 +4,7 @@
 
 > This project helps the user to write SQL queries to create insert and retrieve data from the animals table found in the vet clinic database.
 
-![](Screenshot%20from%202022-01-18%2023-13-21.png)
-
+![image](https://user-images.githubusercontent.com/58233753/150022273-ec09ae92-e9c0-4509-b09b-d84c7674ee07.png)
 
 ## Built With 
 
