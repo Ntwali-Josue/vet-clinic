@@ -54,8 +54,6 @@ CREATE TABLE visits (
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
-SELECT COUNT(*) FROM visits where animal_id = 4;
-SELECT * FROM visits where vet_id = 2;
-SELECT * FROM owners where email = 'owner_18327@mail.com';
-
 CREATE INDEX visit_index ON visits(animal_id);
+CREATE INDEX visit_vet ON visits(vet_id); 
+CREATE INDEX email_index ON owners(email ASC); 
