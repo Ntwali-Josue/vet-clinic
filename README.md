@@ -4,6 +4,9 @@
 
 > This project helps the user to write SQL queries to create insert and retrieve data from the animals table found in the vet clinic database.
 
+![](../vet-clinic/Screenshot%20from%202022-01-18%2023-13-21.png)
+
+
 ## Built With 
 
 - [![](https://img.shields.io/badge/Built%20With-POSTGRESQL-blueviolet)](https://www.tutorialspoint.com/postgresql/postgresql_create_table.htm)
