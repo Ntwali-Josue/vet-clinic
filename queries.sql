@@ -55,3 +55,7 @@ SELECT vets.name as "Veterinary", animals.name, visits.date_of_visit FROM vets J
 SELECT  animals.id, animals.name, animals.date_of_birth, animals.escape_attempts, animals.neutered, animals.weigth_kg,  vets.id, vets.name, vets.age, vets.date_of_graduation,  visits.date_of_visit FROM vets JOIN visits ON vets.id = visits.vet_id JOIN animals ON visits.animal_id = animals.id ORDER BY visits.date_of_visit DESC LIMIT 1;
 SELECT COUNT(visits.date_of_visit) FROM animals LEFT JOIN visits ON animals.id = visits.animal_id JOIN vets  ON visits.vet_id = vets.id FULL JOIN specializations  ON vets.id = specializations.vet_id FULL JOIN species  ON specializations.species_id = species.id WHERE specializations.species_id != animals.species_id and vets.name != 'Stephanie Mendez' or vets.name = 'Maisy Smith';
 SELECT count(species.name), species.name, vets.name FROM animals JOIN owners ON (animals.owner_id = owners.id) JOIN species ON (species.id = animals.species_id) JOIN visits ON (visits.animal_id = animals.id)  JOIN vets ON (vets.id = visits.vet_id) LEFT JOIN specializations on (specializations.vet_id = vets.id) WHERE specializations.vet_id is null GROUP BY species.name, vets.name limit 1; 
+
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
